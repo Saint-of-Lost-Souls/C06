@@ -3,19 +3,19 @@
 int	main(int argc, char **argv)
 {
 	int		i;
-	int		j;
+	int		count;
 
-	j = argc - 1;
-	while (j > 0)
+	count = argc - 1;
+	while (count > 0)
 	{
 		i = 0;
-		while (argv[j][i] != '\0')
+		while (argv[count][i])
 		{
-			write(1, &argv[j][i], 1);
+			write(1, &argv[count][i], 1);
 			i++;
 		}
 		write(1, "\n", 1);
-		j--;
+		count--;
 	}
 	return (0);
 }
